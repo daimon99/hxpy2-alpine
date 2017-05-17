@@ -14,7 +14,9 @@ RUN echo '' > /etc/apk/repositories && \
         gcc \
         musl-dev \
         bash \
-        tzdata && \
+        tzdata \
+        postgresql-dev \
+        && \
     echo "${TIME_ZONE}" > /etc/timezone && \
     ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
 
